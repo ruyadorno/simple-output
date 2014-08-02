@@ -1,6 +1,6 @@
 # simple-output
 
-version: 0.0.0
+version: 0.1.0
 
 Output messages to stdout/stderr
 
