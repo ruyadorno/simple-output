@@ -1,6 +1,6 @@
 {
   "name": "simple-output",
-  "version": "0.1.1-rc",
+  "version": "0.2.0",
   "main": "lib/simple-output.js",
   "description": "Output messages to stdout/stderr",
   "homepage": "https://github.com/ruyadorno/simple-output",

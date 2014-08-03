@@ -1,6 +1,6 @@
 # simple-output
 
-version: 0.1.1-rc
+version: 0.2.0
 
 [![Build Status](https://travis-ci.org/ruyadorno/simple-output.svg?branch=master)](https://travis-ci.org/SunGard-Labs/grunt-sg-release)
 
