@@ -38,6 +38,7 @@
     "log-symbols": "1.0.0"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "node test.js"
   }
 }
+
