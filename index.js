@@ -5,23 +5,23 @@ var symbols = require('log-symbols');
 
 
 function success(msg) {
-  process.stdout.write(symbols.success + '  ' + msg + '\n');
+  module.exports.stdout.write(symbols.success + '  ' + msg + '\n');
 }
 
 function error(msg) {
-  process.stderr.write(symbols.error + '  ' + msg + '\n');
+  module.exports.stderr.write(symbols.error + '  ' + msg + '\n');
 }
 
 function info(msg) {
-  process.stdout.write(symbols.info + '  ' + msg + '\n');
+  module.exports.stdout.write(symbols.info + '  ' + msg + '\n');
 }
 
 function message(msg) {
-  process.stdout.write(msg + '\n');
+  module.exports.stdout.write(msg + '\n');
 }
 
 function warn(msg) {
-  process.stdout.write(symbols.warning + '  ' + msg + '\n');
+  module.exports.stdout.write(symbols.warning + '  ' + msg + '\n');
 }
 
 
@@ -29,6 +29,8 @@ function warn(msg) {
 
 
 module.exports = {
+  stdout: process.stdout,
+  stderr: process.stderr,
   success: success,
   error: error,
   info: info,
