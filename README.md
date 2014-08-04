@@ -1,6 +1,6 @@
 # simple-output
 
-version: 0.2.0
+version: 0.2.1
 
 [![Build Status](https://travis-ci.org/ruyadorno/simple-output.svg?branch=master)](https://travis-ci.org/SunGard-Labs/grunt-sg-release)
 
@@ -24,6 +24,24 @@ log.success('Successful hello world');
 - info(msg)
 - message(msg)
 - warning(msg)
+
+## Testing
+
+This module helps on testing your output data by exposing the streams to which the data gets written to.
+
+In order to test your output information, replace the stdout/stderr properties with an mock object containing a write function. See the example below:
+
+```javascript
+var log = require('simple-output');
+
+log.stdout = {
+    write: function(msg) {
+        assert(msg, 'hello world');
+    }
+};
+
+log.message('hello world');
+```
 
 ## License
 Copyright (c) 2014 Ruy Adorno. Licensed under the MIT license.
