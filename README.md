@@ -25,6 +25,24 @@ log.success('Successful hello world');
 - message(msg)
 - warning(msg)
 
+## Testing
+
+This module helps on testing your output data by exposing the streams to which the data gets written to.
+
+In order to test your output information, replace the stdout/stderr properties with an mock object containing a write function. See the example below:
+
+```javascript
+var log = require('simple-output');
+
+log.stdout = {
+    write: function(msg) {
+        assert(msg, 'hello world');
+    }
+};
+
+log.message('hello world');
+```
+
 ## License
 Copyright (c) 2014 Ruy Adorno. Licensed under the MIT license.
 
