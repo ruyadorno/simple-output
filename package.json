@@ -1,6 +1,6 @@
 {
   "name": "simple-output",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "index.js",
   "description": "Output messages to stdout/stderr",
   "homepage": "https://github.com/ruyadorno/simple-output",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "user/repo"
+    "url": "https://github.com/ruyadorno/simple-output.git"
   },
   "licenses": [
     {
