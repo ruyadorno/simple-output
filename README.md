@@ -2,7 +2,7 @@
 
 version: 0.2.3-rc
 
-[![Build Status](https://travis-ci.org/ruyadorno/simple-output.svg?branch=master)](https://travis-ci.org/SunGard-Labs/grunt-sg-release)
+[![Build Status](https://travis-ci.org/ruyadorno/simple-output.svg?branch=master)](https://travis-ci.org/ruyadorno/simple-output)
 
 Output messages to stdout/stderr
 
