@@ -23,7 +23,7 @@ log.success('Successful hello world');
 - error(msg)
 - info(msg)
 - message(msg)
-- warning(msg)
+- warn(msg)
 
 ## Testing
 
