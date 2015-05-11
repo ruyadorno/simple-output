@@ -1,8 +1,8 @@
 # simple-output
 
-version: 0.2.2
+version: 1.0.0
 
-[![Build Status](https://travis-ci.org/ruyadorno/simple-output.svg?branch=master)](https://travis-ci.org/SunGard-Labs/grunt-sg-release)
+[![Build Status](https://travis-ci.org/ruyadorno/simple-output.svg?branch=master)](https://travis-ci.org/ruyadorno/simple-output)
 
 Output messages to stdout/stderr
 

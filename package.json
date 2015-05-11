@@ -1,6 +1,6 @@
 {
   "name": "simple-output",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "main": "index.js",
   "description": "Output messages to stdout/stderr",
   "homepage": "https://github.com/ruyadorno/simple-output",
@@ -35,7 +35,7 @@
     "jshint-stylish": "~0.1.3"
   },
   "dependencies": {
-    "log-symbols": "1.0.0"
+    "log-symbols": "^1.0.x"
   },
   "scripts": {
     "test": "node test.js"
