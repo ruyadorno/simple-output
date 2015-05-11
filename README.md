@@ -1,6 +1,6 @@
 # simple-output
 
-version: 0.2.3-rc
+version: 1.0.0
 
 [![Build Status](https://travis-ci.org/ruyadorno/simple-output.svg?branch=master)](https://travis-ci.org/ruyadorno/simple-output)
 
