@@ -19,27 +19,9 @@ module.exports = function (grunt) {
       lib: {
         src: ['index.js']
       }
-    },
-    sg_release: {
-      options: {
-        skipBowerInstall: true,
-        developBranch: 'develop',
-        masterBranch: 'master',
-        files: [
-          'package.json',
-          'README.md'
-        ],
-        commitMessage: 'Release v%VERSION%',
-        commitFiles: ['-a'], // '-a' for all files
-        pushTo: 'origin'
-      }
     }
-
   });
-
-  grunt.registerTask('release', ['jshint', 'sg_release']);
 
   // Default task.
   grunt.registerTask('default', ['jshint']);
-
 };
