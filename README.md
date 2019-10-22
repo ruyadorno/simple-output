@@ -1,10 +1,10 @@
 # simple-output
 
-version: 1.0.1
-
+[![NPM version](https://badge.fury.io/js/simple-output.svg)](https://npmjs.org/package/simple-output)
 [![Build Status](https://travis-ci.org/ruyadorno/simple-output.svg?branch=master)](https://travis-ci.org/ruyadorno/simple-output)
+[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/ruyadorno/simple-output/master/LICENSE)
 
-Output messages to stdout/stderr
+Pretty output messages to stdout/stderr
 
 ## Getting Started
 Install the module with: `npm install simple-output`
@@ -27,12 +27,15 @@ log.success('Successful hello world');
 
 ## Testing
 
-This module helps on testing your output data by exposing the streams to which the data gets written to.
+This module helps on testing your output data by making it simpler to mock `simple-output` and its methods or use the exposed streams interface to which the data gets written to.
 
-In order to test your output information, replace the stdout/stderr properties with an mock object containing a write function. See the example below:
+In order to test your output information, replace the stdout/stderr properties with an mock object containing a write function (simulating the streams api). See the example below:
+
+### Mock simpleOutput.stdout
 
 ```javascript
 var log = require('simple-output');
+var myModule = require('../my-module');
 
 log.stdout = {
     write: function(msg) {
@@ -40,9 +43,24 @@ log.stdout = {
     }
 };
 
-log.message('hello world');
+myModule.methodThatUsesSimpleLogInfoInternally();
+```
+
+### Using a mocking library
+
+```javascript
+var requireInject = require('require-inject');
+
+var myModule = requireInject('../my-module', {
+    'simple-output': {
+        info: msg => assert(msg, 'hello world');
+    }
+});
+
+myModule.methodThatUsesSimpleLogInfoInternally();
 ```
 
 ## License
-Copyright (c) 2014 Ruy Adorno. Licensed under the MIT license.
+
+[MIT](LICENSE) © 2019 [Ruy Adorno](http://ruyadorno.com)
 

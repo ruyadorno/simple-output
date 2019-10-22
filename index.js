@@ -31,10 +31,10 @@ function warn(msg) {
 module.exports = {
   stdout: process.stdout,
   stderr: process.stderr,
-  success: success,
-  error: error,
-  info: info,
-  message: message,
-  warn: warn
+  success,
+  error,
+  info,
+  message,
+  warn
 };
 
