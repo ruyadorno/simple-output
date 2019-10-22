@@ -5,6 +5,9 @@
   "files": [
     "index.js"
   ],
+  "engines": {
+    "node": ">=10"
+  },
   "description": "Output messages to stdout/stderr",
   "homepage": "https://github.com/ruyadorno/simple-output",
   "bugs": "https://github.com/ruyadorno/simple-output/issues",
@@ -31,15 +34,13 @@
     "log"
   ],
   "devDependencies": {
-    "grunt-contrib-jshint": "^1.1.0",
-    "jshint-stylish": "^2.2.1",
-    "load-grunt-tasks": "^3.5.2",
-    "time-grunt": "^1.4.0"
+    "jshint": "^2.10.2"
   },
   "dependencies": {
-    "log-symbols": "^2.2.0"
+    "log-symbols": "^3.0.0"
   },
   "scripts": {
+    "pretest": "jshint index.js test.js",
     "test": "node test.js"
   }
 }
