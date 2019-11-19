@@ -1,4 +1,5 @@
-var symbols = require('log-symbols');
+const symbols = require('log-symbols');
+const chalk = require('chalk');
 
 
 // --
@@ -24,6 +25,15 @@ function warn(msg) {
   module.exports.stdout.write(symbols.warning + '  ' + msg + '\n');
 }
 
+function node(msg) {
+  const icon = '⬢';
+  const matchOperatorsRegex = /[|\\{}()[\]^$+*?.-]/g;
+  const node = chalk.green(
+    icon.replace(matchOperatorsRegex, '\\$&')
+  );
+  module.exports.stdout.write(node + '  ' + msg + '\n');
+}
+
 
 // ---
 
@@ -35,6 +45,7 @@ module.exports = {
   error,
   info,
   message,
+  node,
   warn
 };
 

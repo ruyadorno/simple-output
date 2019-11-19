@@ -23,6 +23,7 @@ log.success('Successful hello world');
 - error(msg)
 - info(msg)
 - message(msg)
+- node(msg)
 - warn(msg)
 
 ## Testing

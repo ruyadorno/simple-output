@@ -34,9 +34,10 @@
     "log"
   ],
   "devDependencies": {
-    "jshint": "^2.10.2"
+    "jshint": "^2.10.3"
   },
   "dependencies": {
+    "chalk": "^3.0.0",
     "log-symbols": "^3.0.0"
   },
   "scripts": {

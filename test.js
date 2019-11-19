@@ -70,10 +70,20 @@ test({
     }
 });
 
+// test node msg
+test({
+    check: () => log.node('Node message'),
+    expected: {
+        stdio: 'stdout',
+        message: 'Node message'
+    }
+});
+
 // Visual feedback, just print these to stdout
 log.success('Success message');
 log.error('Error message');
 log.info('Info message');
 log.warn('Warn message');
 log.message('Simple message');
+log.node('Node.js');
 
