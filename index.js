@@ -26,6 +26,9 @@ function warn(msg) {
 }
 
 function node(msg) {
+  if (process.platform === 'win32') {
+    return success(msg);
+  }
   const icon = '⬢';
   const matchOperatorsRegex = /[|\\{}()[\]^$+*?.-]/g;
   const node = chalk.green(
