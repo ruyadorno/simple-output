@@ -21,6 +21,10 @@ function message(msg) {
   module.exports.stdout.write(msg + '\n');
 }
 
+function hint(msg) {
+  module.exports.stdout.write(chalk.dim(msg) + '\n');
+}
+
 function warn(msg) {
   module.exports.stdout.write(symbols.warning + '  ' + msg + '\n');
 }
@@ -48,6 +52,7 @@ module.exports = {
   error,
   info,
   message,
+  hint,
   node,
   warn
 };

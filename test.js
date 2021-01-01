@@ -36,7 +36,7 @@ test({
 
 // test error msg
 test({
-    check: () => log.success('Error message'),
+    check: () => log.error('Error message'),
     expected: {
         stdio: 'stderr',
         message: 'Error message'
@@ -45,7 +45,7 @@ test({
 
 // test info msg
 test({
-    check: () => log.success('Info message'),
+    check: () => log.info('Info message'),
     expected: {
         stdio: 'stdout',
         message: 'Info message'
@@ -54,7 +54,7 @@ test({
 
 // test warn msg
 test({
-    check: () => log.success('Warn message'),
+    check: () => log.warn('Warn message'),
     expected: {
         stdio: 'stdout',
         message: 'Warn message'
@@ -67,6 +67,15 @@ test({
     expected: {
         stdio: 'stdout',
         message: 'Simple message'
+    }
+});
+
+// test hint msg
+test({
+    check: () => log.hint('This should read more like a hint'),
+    expected: {
+        stdio: 'stdout',
+        message: 'This should read more like a hint\x1B[22m'
     }
 });
 
@@ -85,5 +94,6 @@ log.error('Error message');
 log.info('Info message');
 log.warn('Warn message');
 log.message('Simple message');
+log.hint('Hint message');
 log.node('Node.js');
 

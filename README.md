@@ -23,6 +23,7 @@ log.success('Successful hello world');
 - error(msg)
 - info(msg)
 - message(msg)
+- hint(msg)
 - node(msg)
 - warn(msg)
 
@@ -63,5 +64,5 @@ myModule.methodThatUsesSimpleLogInfoInternally();
 
 ## License
 
-[MIT](LICENSE) © 2019 [Ruy Adorno](http://ruyadorno.com)
+[MIT](LICENSE) © 2021 [Ruy Adorno](http://ruyadorno.com)
 
