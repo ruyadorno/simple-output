@@ -19,11 +19,7 @@
     "type": "git",
     "url": "https://github.com/ruyadorno/simple-output.git"
   },
-  "licenses": [
-    {
-      "type": "MIT"
-    }
-  ],
+  "license": "MIT",
   "keywords": [
     "terminal",
     "cli",
