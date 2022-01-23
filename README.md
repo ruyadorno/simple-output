@@ -6,6 +6,16 @@
 
 Pretty output messages to stdout/stderr
 
+<div align="center">
+	<br>
+	<br>
+	<br>
+	<img alt="render examples" width="300" src="https://cdn.jsdelivr.net/gh/ruyadorno/simple-output/demo.png">
+	<br>
+	<br>
+	<br>
+</div>
+
 ## Getting Started
 Install the module with: `npm install simple-output`
 
@@ -64,5 +74,5 @@ myModule.methodThatUsesSimpleLogInfoInternally();
 
 ## License
 
-[MIT](LICENSE) © 2021 [Ruy Adorno](http://ruyadorno.com)
+[MIT](LICENSE) © 2022 [Ruy Adorno](http://ruyadorno.com)
 
