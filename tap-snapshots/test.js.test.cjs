@@ -10,6 +10,31 @@ exports[`test.js TAP > must match snapshot 1`] = `
 
 `
 
+exports[`test.js TAP > must match snapshot 10`] = `
+[34mi[39m  Info message
+
+`
+
+exports[`test.js TAP > must match snapshot 11`] = `
+[33m‼[39m  Warn message
+
+`
+
+exports[`test.js TAP > must match snapshot 12`] = `
+Simple message
+
+`
+
+exports[`test.js TAP > must match snapshot 13`] = `
+[2mHint message[22m
+
+`
+
+exports[`test.js TAP > must match snapshot 14`] = `
+[32m⬢[39m  Node message
+
+`
+
 exports[`test.js TAP > must match snapshot 2`] = `
 [31m✖[39m  Error message
 
@@ -37,5 +62,15 @@ exports[`test.js TAP > must match snapshot 6`] = `
 
 exports[`test.js TAP > must match snapshot 7`] = `
 [32m⬢[39m  Node message
+
+`
+
+exports[`test.js TAP > must match snapshot 8`] = `
+[32m√[39m  Success message
+
+`
+
+exports[`test.js TAP > must match snapshot 9`] = `
+[31m×[39m  Error message
 
 `

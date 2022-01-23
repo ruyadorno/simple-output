@@ -21,3 +21,13 @@ log.warn('Warn message');
 log.message('Simple message');
 log.hint('Hint message');
 log.node('Node message');
+
+// test no icons version
+process.env. SIMPLE_OUTPUT_NO_ICONS = true;
+log.success('Success message');
+log.error('Error message');
+log.info('Info message');
+log.warn('Warn message');
+log.message('Simple message');
+log.hint('Hint message');
+log.node('Node message');

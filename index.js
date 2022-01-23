@@ -1,32 +1,37 @@
-const symbols = require('log-symbols');
 const chalk = require('chalk');
+const isWindows = () =>
+  process.platform === 'win32' || process.env.SIMPLE_OUTPUT_NO_ICONS;
 
 
 // --
 
 
 function success(msg) {
-  module.exports.stdout.write(symbols.success + '  ' + msg + '\n');
+  const symbol = isWindows() ? chalk.green('√') : chalk.green('✔');
+  module.exports.stdout.write(`${symbol}  ${msg}\n`);
 }
 
 function error(msg) {
-  module.exports.stderr.write(symbols.error + '  ' + msg + '\n');
+  const symbol = isWindows() ? chalk.red('×') : chalk.red('✖');
+  module.exports.stderr.write(`${symbol}  ${msg}\n`);
 }
 
 function info(msg) {
-  module.exports.stdout.write(symbols.info + '  ' + msg + '\n');
+  const symbol = isWindows() ? chalk.blue('i') : chalk.blue('ℹ');
+  module.exports.stdout.write(`${symbol}  ${msg}\n`);
 }
 
 function message(msg) {
-  module.exports.stdout.write(msg + '\n');
+  module.exports.stdout.write(`${msg}\n`);
 }
 
 function hint(msg) {
-  module.exports.stdout.write(chalk.dim(msg) + '\n');
+  module.exports.stdout.write(`${chalk.dim(msg)}\n`);
 }
 
 function warn(msg) {
-  module.exports.stdout.write(symbols.warning + '  ' + msg + '\n');
+  const symbol = isWindows() ? chalk.yellow('‼') : chalk.yellow('⚠');
+  module.exports.stdout.write(`${symbol}  ${msg}\n`);
 }
 
 function node(msg) {
