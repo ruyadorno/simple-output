@@ -28,12 +28,12 @@ log.success('Successful hello world');
 ## Available methods
 
 - success(msg)
-- error(msg)
 - info(msg)
-- message(msg)
-- hint(msg)
-- node(msg)
 - warn(msg)
+- error(msg)
+- node(msg) prints a green hexagon icon (on supported platforms) along with msg
+- message(msg) prints msg, no icon associated with it
+- hint(msg) useful if you want to dim some of the output
 
 ## Testing
 
