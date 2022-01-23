@@ -1,6 +1,8 @@
 const chalk = require('chalk');
 const isWindows = () =>
-  process.platform === 'win32' || process.env.SIMPLE_OUTPUT_NO_ICONS;
+  /* istanbul ignore next */
+  (process.platform === 'win32' && process.env.TERM !== 'xterm-256color') ||
+  process.env.SIMPLE_OUTPUT_NO_ICONS;
 
 
 // --
@@ -35,16 +37,8 @@ function warn(msg) {
 }
 
 function node(msg) {
-  /* istanbul ignore next */
-  if (process.platform === 'win32') {
-    return success(msg);
-  }
-  const icon = '⬢';
-  const matchOperatorsRegex = /[|\\{}()[\]^$+*?.-]/g;
-  const node = chalk.green(
-    icon.replace(matchOperatorsRegex, '\\$&')
-  );
-  module.exports.stdout.write(node + '  ' + msg + '\n');
+  const symbol = isWindows() ? chalk.green('*') : chalk.green('⬢');
+  module.exports.stdout.write(`${symbol}  ${msg}\n`);
 }
 
 

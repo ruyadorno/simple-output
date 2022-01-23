@@ -31,7 +31,7 @@ exports[`test.js TAP > must match snapshot 13`] = `
 `
 
 exports[`test.js TAP > must match snapshot 14`] = `
-[32m⬢[39m  Node message
+[32m*[39m  Node message
 
 `
 
