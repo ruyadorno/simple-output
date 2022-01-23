@@ -30,6 +30,7 @@ function warn(msg) {
 }
 
 function node(msg) {
+  /* istanbul ignore next */
   if (process.platform === 'win32') {
     return success(msg);
   }

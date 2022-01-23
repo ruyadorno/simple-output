@@ -30,7 +30,8 @@
     "log"
   ],
   "devDependencies": {
-    "jshint": "^2.13.3"
+    "jshint": "^2.13.3",
+    "tap": "^15.1.6"
   },
   "dependencies": {
     "chalk": "^4.1.0",
@@ -38,6 +39,7 @@
   },
   "scripts": {
     "pretest": "jshint index.js test.js",
-    "test": "node test.js"
+    "test": "tap test.js",
+    "snap": "tap -S test.js"
   }
 }
