@@ -9,9 +9,7 @@ Pretty output messages to stdout/stderr
 <div align="center">
 	<br>
 	<br>
-	<br>
-	<img alt="render examples" width="300" src="https://cdn.jsdelivr.net/gh/ruyadorno/simple-output/demo.png">
-	<br>
+	<img alt="render examples" width="350" src="https://user-images.githubusercontent.com/220900/150694210-7284e3fe-e713-42a4-98b9-f6d42dad9ac1.png">
 	<br>
 	<br>
 </div>
