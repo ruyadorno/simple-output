@@ -30,7 +30,7 @@
     "log"
   ],
   "devDependencies": {
-    "jshint": "^2.12.0"
+    "jshint": "^2.13.3"
   },
   "dependencies": {
     "chalk": "^4.1.0",
