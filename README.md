@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/ruyadorno/simple-output.svg?branch=master)](https://travis-ci.org/ruyadorno/simple-output)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/ruyadorno/simple-output/master/LICENSE)
 
-Pretty output messages to stdout/stderr
+Pretty output messages to stdout/stderr with no extra dependencies.
 
 <div align="center">
 	<br>

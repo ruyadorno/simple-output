@@ -8,12 +8,13 @@
   "engines": {
     "node": ">=10"
   },
-  "description": "Output messages to stdout/stderr",
+  "description": "Output messages to stdout/stderr, zero deps.",
   "homepage": "https://github.com/ruyadorno/simple-output",
   "bugs": "https://github.com/ruyadorno/simple-output/issues",
   "author": {
     "name": "Ruy Adorno",
-    "url": "http://ruyadorno.com"
+    "url": "http://ruyadorno.com",
+    "twitter": "ruyadorno"
   },
   "repository": {
     "type": "git",
@@ -32,9 +33,6 @@
   "devDependencies": {
     "jshint": "^2.13.3",
     "tap": "^15.1.6"
-  },
-  "dependencies": {
-    "chalk": "^4.1.0"
   },
   "scripts": {
     "pretest": "jshint index.js test.js",

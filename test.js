@@ -14,6 +14,7 @@ log.stdout.write = snapshotAndPrint;
 log.stderr = new Writable();
 log.stderr.write = snapshotAndPrint;
 
+process.env.FORCE_COLOR = 'true';
 log.success('Success message');
 log.error('Error message');
 log.info('Info message');
@@ -23,7 +24,17 @@ log.hint('Hint message');
 log.node('Node message');
 
 // test no icons version
-process.env. SIMPLE_OUTPUT_NO_ICONS = true;
+process.env.SIMPLE_OUTPUT_NO_ICONS = 1;
+log.success('Success message');
+log.error('Error message');
+log.info('Info message');
+log.warn('Warn message');
+log.message('Simple message');
+log.hint('Hint message');
+log.node('Node message');
+
+process.env.FORCE_COLOR = undefined;
+process.env.CI = 1;
 log.success('Success message');
 log.error('Error message');
 log.info('Info message');
