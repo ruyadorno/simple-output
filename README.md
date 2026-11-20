@@ -1,7 +1,7 @@
 # simple-output
 
 [![NPM version](https://badge.fury.io/js/simple-output.svg)](https://npmjs.org/package/simple-output)
-[![Build Status](https://travis-ci.org/ruyadorno/simple-output.svg?branch=master)](https://travis-ci.org/ruyadorno/simple-output)
+[![CI](https://github.com/ruyadorno/simple-output/actions/workflows/ci.yml/badge.svg)](https://github.com/ruyadorno/simple-output/actions/workflows/ci.yml)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/ruyadorno/simple-output/master/LICENSE)
 
 Pretty output messages to stdout/stderr with no extra dependencies.

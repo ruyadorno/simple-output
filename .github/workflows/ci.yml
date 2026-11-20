@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Lint and test (Node ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: ['lts/*', 'latest']
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - uses: vltpkg/setup-vlt@v1
+
+      # Retry once: installs with an empty cache have failed with connect
+      # ETIMEDOUT and passed on a rerun that reuses the partial cache.
+      - name: Install dependencies
+        run: vlt ci || vlt ci
+
+      - name: Lint and test
+        run: vlr test
+
+  test-node-10:
+    # engines.node is >=10 but vlt needs Node 22.22+, so install with a
+    # current Node and then run the suite on Node 10.
+    name: Lint and test (Node 10)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - uses: vltpkg/setup-vlt@v1
+
+      - name: Install dependencies
+        run: vlt ci || vlt ci
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '10'
+
+      # vlr can't run on Node 10; the npm bundled with it only runs the
+      # package.json scripts (pretest + test) here and installs nothing.
+      - name: Lint and test
+        run: npm test
