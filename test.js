@@ -33,6 +33,10 @@ log.message('Simple message');
 log.hint('Hint message');
 log.node('Node message');
 
+// CI disables colors even on a color-capable terminal; pin TERM so this
+// doesn't depend on the terminal running the tests (GitHub Actions has
+// no TERM, so colors were already off and the CI check never ran)
+process.env.TERM = 'xterm-256color';
 process.env.FORCE_COLOR = undefined;
 process.env.CI = 1;
 log.success('Success message');
