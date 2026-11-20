@@ -6,7 +6,7 @@
     "index.js"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=26"
   },
   "description": "Output messages to stdout/stderr, zero deps.",
   "homepage": "https://github.com/ruyadorno/simple-output",

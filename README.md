@@ -17,6 +17,8 @@ Pretty output messages to stdout/stderr with no extra dependencies.
 ## Getting Started
 Install the module with: `npm install simple-output`
 
+Requires Node.js 26 or later.
+
 ## Examples
 
 ```javascript
@@ -72,7 +74,7 @@ myModule.methodThatUsesSimpleLogInfoInternally();
 
 ## Development
 
-This repo uses the [vlt](https://vlt.io) package manager (Node.js 22.22 or later) and commits `vlt-lock.json`:
+This repo uses the [vlt](https://vlt.io) package manager and commits `vlt-lock.json`:
 
 ```sh
 vlt ci      # install dev dependencies exactly as locked
