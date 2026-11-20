@@ -1,6 +1,6 @@
 {
   "name": "simple-output",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "main": "index.js",
   "files": [
     "index.js"
@@ -10,11 +10,15 @@
   },
   "description": "Output messages to stdout/stderr, zero deps.",
   "homepage": "https://github.com/ruyadorno/simple-output",
-  "bugs": "https://github.com/ruyadorno/simple-output/issues",
+  "bugs": [
+    {
+      "type": "link",
+      "url": "https://github.com/ruyadorno/simple-output/issues"
+    }
+  ],
   "author": {
     "name": "Ruy Adorno",
-    "url": "http://ruyadorno.com",
-    "twitter": "ruyadorno"
+    "url": "http://ruyadorno.com"
   },
   "repository": {
     "type": "git",
