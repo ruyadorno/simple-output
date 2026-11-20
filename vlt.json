@@ -1,0 +1,5 @@
+{
+  "config": {
+    "allow-skills": ":not(:malware), #@vltpkg/skills"
+  }
+}

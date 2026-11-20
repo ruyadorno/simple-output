@@ -70,6 +70,15 @@ var myModule = requireInject('../my-module', {
 myModule.methodThatUsesSimpleLogInfoInternally();
 ```
 
+## Development
+
+This repo uses the [vlt](https://vlt.io) package manager (Node.js 22.22 or later) and commits `vlt-lock.json`:
+
+```sh
+vlt ci      # install dev dependencies exactly as locked
+vlr test    # lint (jshint) and run the tap tests
+```
+
 ## License
 
 [MIT](LICENSE) © 2022 [Ruy Adorno](http://ruyadorno.com)
