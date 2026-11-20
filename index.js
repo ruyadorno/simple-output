@@ -1,13 +1,13 @@
-/* istanbul ignore next */
+/* c8 ignore start - platform and terminal detection */
 const isWindows = () =>
   (process.platform === 'win32' && process.env.TERM !== 'xterm-256color') ||
   process.env.SIMPLE_OUTPUT_NO_ICONS;
 
-/* istanbul ignore next */
 const hasBasicColorSupport = () => (
   /^screen|^xterm|^vt100|^vt220|^rxvt|color|ansi|cygwin|linux/i.test(
     process.env.TERM) || process.env.COLORTERM
 );
+/* c8 ignore stop */
 
 const colors = () =>
   process.env.FORCE_COLOR === 'true' ||
